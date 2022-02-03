@@ -1,5 +1,10 @@
 {% extends "base.html" %}
 
 {% block content %}
-<p>yololo</p>
+    {% if videos %}
+        {% for video in videos %}
+            <a href="{% url 'video-view' video.pk %}">{{ video.title }}</a>
+            <p>File loc: {{ video.file_location }}</p>
+        {% endfor %}
+    {% endif %}
 {% endblock %}
