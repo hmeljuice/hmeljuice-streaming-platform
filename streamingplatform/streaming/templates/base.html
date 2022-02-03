@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% block title %}<title>Blaž's Streaming Platform</title>{% endblock %}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Add custom CSS from static file -->
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/style.css' %}"
+</head>
+<body>
+<br>
+<h1 class="page-title">Blaž Streaming Platform</h1>
+<br>
+{% block content %}
+{% endblock %}
+</body>
+</html>
