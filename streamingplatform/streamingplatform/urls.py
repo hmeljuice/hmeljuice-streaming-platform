@@ -22,7 +22,9 @@ from django.conf.urls.static import static
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('streaming/', include('streaming.urls')),
-    path('', RedirectView.as_view(url='streaming/', permanent=True)),
+    path('', RedirectView.as_view(url='accounts/login/', permanent=True)),
+    path('accounts/', include('django.contrib.auth.urls')),
+    # path('accounts/profile/', RedirectView.as_view(url=''))
 ]
 
 if settings.DEBUG:
