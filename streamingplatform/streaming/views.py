@@ -7,7 +7,7 @@ from django.contrib.auth.decorators import login_required, permission_required
 @login_required
 def index(request):
     """View function for home page"""
-    videos = Video.objects.all()
+    videos = Video.objects.filter(lender=request.user)
 
     context = {
         'videos': videos,
